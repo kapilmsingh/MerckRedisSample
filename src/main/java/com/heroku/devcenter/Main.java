@@ -2,6 +2,8 @@ package com.heroku.devcenter;
 
 import java.net.URI;
 
+import org.springframework.context.ApplicationContext;
+
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -10,6 +12,7 @@ import redis.clients.jedis.Protocol;
 public class Main {
 
 	public static void main(String[] args){
+		
 		
 		JedisPool pool;
 		try{
@@ -36,5 +39,6 @@ public class Main {
 		} finally {
 				pool.returnResource(jedis);
 		}
+		
 	}
 }
